@@ -17,7 +17,7 @@ class _MyAppState extends State<MyApp> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Appbar demo',
+          'Bottom navigation Bar',
           style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.blue,

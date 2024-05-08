@@ -17,10 +17,19 @@ class _MyAppState extends State<MyApp> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Flutter Image',
+          'image',
           style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.blue,
+      ),
+      body: Container(
+        height: 300,
+        width: double.infinity,
+        color: Colors.blue,
+        child: Image(
+          image: AssetImage('assets/images/i1.jpeg'),
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }

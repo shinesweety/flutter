@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -16,7 +14,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   void showBottom() {
-    showModalBottomSheet<Void>(
+    showModalBottomSheet(
         context: context,
         builder: (BuildContext context) {
           return Container(

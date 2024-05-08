@@ -12,9 +12,9 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  bool mon = false;
-  bool tues = false;
-  bool wed = false;
+  bool? mon = false;
+  bool? tues = false;
+  bool? wed = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,37 +35,37 @@ class _MyAppState extends State<MyApp> {
                   value: mon,
                   onChanged: (value) {
                     setState(() {
-                      mon = value!;
+                      mon = value;
                     });
                   },
                 ),
-                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  Text('tues'),
-                  Checkbox(
-                    value: tues,
-                    onChanged: (value) {
-                      setState(() {
-                        tues = value!;
-                      });
-                    },
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text('wed'),
-                      Checkbox(
-                        value: wed,
-                        onChanged: (value) {
-                          setState(() {
-                            wed = value!;
-                          });
-                        },
-                      )
-                    ],
-                  )
-                ])
               ],
             ),
+            Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Text('tues'),
+              Checkbox(
+                value: tues,
+                onChanged: (value) {
+                  setState(() {
+                    tues = value;
+                  });
+                },
+              ),
+            ]),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('wed'),
+                Checkbox(
+                  value: wed,
+                  onChanged: (value) {
+                    setState(() {
+                      wed = value;
+                    });
+                  },
+                )
+              ],
+            )
           ]),
         ));
   }
